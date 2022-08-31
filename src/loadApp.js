@@ -1,4 +1,4 @@
-import App from './App.svelte';
+import App from './infrastructure/App.svelte';
 
 const mount = (el) => {
 	new App({
