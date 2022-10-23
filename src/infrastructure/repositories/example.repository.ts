@@ -1,30 +1,32 @@
 import { http } from "../http/http";
 
-export const exampleRepository = {
-  getAll: async () => {
+import type { IExampleRepository } from "../../domain/interfaces/example.interface";
+
+export default class ExampleRepository implements IExampleRepository {
+  async getAll() {
     return await http.get<any>(
       `http://localhost:3000/api/example`,
       false //No public endpoint
     );
-  },
-  getById: async (id: number) => {
+  }
+  async getById(id: number) {
     return await http.get<any>(
       `http://localhost:3000/api/example/${id}`,
       false //No public endpoint
     );
-  },
-  create: async (example: any) => {
+  }
+  async create(example: any) {
     let body = JSON.stringify(example);
     return await http.post(`http://localhost:3000/api/example`, body, false);
-  },
+  }
 
-  update: async (example: any) => {
+  async update(example: any) {
     let body = JSON.stringify(example);
     return await http.put(`http://localhost:3000/api/example`, body, false);
-  },
+  }
 
-  delete: async (example: any) => {
+  async delete(example: any) {
     let body = JSON.stringify(example);
     return await http.delete(`http://localhost:3000/api/example`, body, false);
-  },
-};
+  }
+}
