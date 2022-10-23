@@ -59,7 +59,7 @@ module.exports = {
 			name:'footer',
 			filename:'remoteEntry.js',
 			exposes:{
-				'./footerModule':'./src/loadApp.js'
+				'./navigationModule':'./src/infrastructure/components/layout/Navigation.svelte'
 			}
 		}),
 		new MiniCssExtractPlugin({
