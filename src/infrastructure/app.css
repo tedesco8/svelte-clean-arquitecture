@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+:root {
+  font-family: var(--fontFamily), Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: var(--black1);
+  background-color: var(--primaryColor);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primaryA: #ffffff;
+  --primaryB: #666666;
+  --accent: #f87c56;
+  --gradientA: linear-gradient(262.85deg, #ff8864 0%, #ec5f38 100%);
+  --gradientB: linear-gradient(29.88deg, #fbdcd2 30.66%, #fffdfc 115.34%);
+  --gradientC: linear-gradient(103.5deg, #ffffff 90.4%, #ffffff 100%);
+  --gradientD: linear-gradient(103.5deg, #FFFFFF 33.81%, rgba(255, 255, 255, 0.6) 100%);
+  --secondaryA: #f7f7f7;
+  --secondaryB: #ededed;
+  --secondaryC: #c4c4c4;
+  --secondaryD: #ada6a6;
+  --secondaryE: #7c7c7c;
+  --secondaryF: #ec5f38;
+  --secondaryG: #fb6264;
+  --infoA: #6864b0;
+  --infoB: #d3d3eb;
+  --infoC: #edeef7;
+  --successA: #00a85a;
+  --successB: #80f3bc;
+  --successC: #d9fbeb;
+  --warningA: #cc8500;
+  --warningB: #ffd20d;
+  --warningC: #fef6d1;
+  --dangerA: #d11238;
+  --dangerB: #ff1f00;
+  --dangerC: #ffe3e3;
+  --gray700: #2D3748;
+
+  --primaryColor: #242424;
+  --pressedButton: #d65b26;
+  --mainColor: #d65b26;
+  --hoverColor: #d65b26;
+  --activeColor: #d65b26;
+
+  --fontFamily: "Roboto";
+}
+
+a {
+  font-weight: 500;
+  color: var(--mainColor);
+  text-decoration: inherit;
+}
+a:hover {
+  color: var(--hoverColor);
+}
+
+html, body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 8px !important;
+  width: 8px !important;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px grey !important;
+  border-radius: 10px !important;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 2px #504b4b !important;
+  background: #707275 !important;
+  border-radius: 15px !important;
+}

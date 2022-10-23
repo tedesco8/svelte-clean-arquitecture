@@ -1,22 +1,20 @@
 <script>
+  import { onMount } from "svelte";
+  import { Router, Route } from "svelte-routing";
+
+  import { MainContainer } from "./components/layout";
+  import { DashboardPage } from "./pages";
+
+  import "./app.css";
+  onMount(() => {
+    console.log("Mounted")
+  });
 </script>
 
-<div class="footer">
-	Footer Application in <img src="https://bluuweb.github.io/svelte-youtube/img/svelte.png" class="svelte-logo"/>
-</div>
-<style>
-	.footer{
-		background-color: #aaa;
-		font-size: 18px;
-		font-weight: bold;
-		text-align: center;
-		height:100%;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-	}
-	.svelte-logo{
-		height:70px;
-	}
-
-</style>
+<Router>
+  <MainContainer>
+    <Route path="/">
+      <DashboardPage />
+    </Route>
+  </MainContainer>
+</Router>
