@@ -1,10 +1,24 @@
 <script>
-  import { onMount } from "svelte";
+  import { getAllContexts, onMount } from "svelte";
   import { breadCumps } from "../../store/layout/layoutStore";
+
+  import ExampleService from "../../../application/services/example.service"
 
   onMount(() => {
     $breadCumps = "Dashboard";
+    getAll()
   });
+
+  const exampleService = new ExampleService();
+
+  let examples = [];
+
+  function getAll() {
+    exampleService.getAll({
+      onSuccess: (res) => examples = res,
+      onError: (error) => console.error(error)
+    })
+  }
 </script>
 
 <div class="dashboard">
