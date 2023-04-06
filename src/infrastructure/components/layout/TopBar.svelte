@@ -18,7 +18,7 @@
     for (const section in breadCump) {
       if (section === "0") {
         htmlToBreadCump = `
-        <p style=margin:0;color:#909090;font-family:"Roboto";font-style:normal;font-weight:400;font-size:24px;line-height:150%;>
+        <p style=margin:0;color:var(--primaryB);font-family:"Roboto";font-style:normal;font-weight:400;font-size:24px;line-height:150%;>
           ${breadCump[section]}
         </p>`;
       } else {
@@ -76,7 +76,7 @@
   }
 
   .container-name {
-    color: #909090;
+    color: var(--primaryB);
     font-family: "Roboto";
     font-style: normal;
     font-weight: 700;

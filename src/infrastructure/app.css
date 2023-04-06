@@ -21,10 +21,10 @@
   -webkit-text-size-adjust: 100%;
 
   --primaryA: #ffffff;
-  --primaryB: #666666;
+  --primaryB: #4d4c4c;
   --accent: #f87c56;
   --gradientA: linear-gradient(262.85deg, #ff8864 0%, #ec5f38 100%);
-  --gradientB: linear-gradient(29.88deg, #fbdcd2 30.66%, #fffdfc 115.34%);
+  --gradientB: linear-gradient(29.88deg, #6fb8fc 30.66%, #fffdfc 115.34%);
   --gradientC: linear-gradient(103.5deg, #ffffff 90.4%, #ffffff 100%);
   --gradientD: linear-gradient(103.5deg, #FFFFFF 33.81%, rgba(255, 255, 255, 0.6) 100%);
   --secondaryA: #f7f7f7;

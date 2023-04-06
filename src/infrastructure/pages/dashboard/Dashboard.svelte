@@ -1,15 +1,16 @@
 <script>
-  import { getAllContexts, onMount } from "svelte";
+  import { onMount } from "svelte";
   import { breadCumps } from "../../store/layout/layoutStore";
 
   import ExampleService from "../../../application/services/example.service"
+  import ExampleRepository from "../../repositories/example.repository";
 
   onMount(() => {
     $breadCumps = "Dashboard";
     getAll()
   });
 
-  const exampleService = new ExampleService();
+  const exampleService = new ExampleService(new ExampleRepository);
 
   let examples = [];
 
