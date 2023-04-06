@@ -41,7 +41,7 @@ export default class ExampleRepository implements IExampleRepository {
     }
   }
 
-  async delete(example: any) {
+  async _delete(example: any) {
     try {
       let body = JSON.stringify(example);
       return await http.delete(

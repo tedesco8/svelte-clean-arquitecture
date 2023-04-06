@@ -1,6 +1,3 @@
-
-import { ExampleRepository } from "../bridge";
-
 import ExampleFactory from "../../domain/factory/example.factory";
 
 import type { IExampleRepository } from "../../domain/interfaces/repositories/exampleRepository.interface";
@@ -8,12 +5,15 @@ import type { Example } from "../../domain/types/example.type";
 import type { Callbacks } from "../../domain/types/common.type";
 
 export default class ExampleService {
-  private exampleRepository: IExampleRepository = new ExampleRepository();
+  private _exampleRepository: IExampleRepository;
+  constructor(exampleRepository: IExampleRepository ) {
+    this._exampleRepository = exampleRepository;
+  }
 
   public getAll(callbacks: Callbacks) {
     const { onSuccess, onError } = callbacks;
     try {
-      const res: any = this.exampleRepository.getAll();
+      const res: any = this._exampleRepository.getAll();
       onSuccess(res);
     } catch (error: any) {
       onError(error);
@@ -23,7 +23,7 @@ export default class ExampleService {
   public getById(id: number, callbacks: Callbacks) {
     const { onSuccess, onError } = callbacks;
     try {
-      const res: any = this.exampleRepository.getById(id);
+      const res: any = this._exampleRepository.getById(id);
       const newExample = ExampleFactory.createExample(res.id, res.firstName, res.legalName, res.middleName, res.paternalSurname, res.maternalSurname);
       onSuccess(newExample);
     } catch (error: any) {
@@ -34,7 +34,7 @@ export default class ExampleService {
   public update(example: Example, callbacks: Callbacks) {
     const { onSuccess, onError } = callbacks;
     try {
-      const res: any = this.exampleRepository.update(example);
+      const res: any = this._exampleRepository.update(example);
       onSuccess(res);
     } catch (error: any) {
       onError(error);
@@ -44,7 +44,7 @@ export default class ExampleService {
   public create(example: Example, callbacks: Callbacks) {
     const { onSuccess, onError } = callbacks;
     try {
-      const res: any = this.exampleRepository.create(example);
+      const res: any = this._exampleRepository.create(example);
       onSuccess(res);
     } catch (error: any) {
       onError(error);
@@ -54,7 +54,7 @@ export default class ExampleService {
   public _delete(example: Example, callbacks: Callbacks) {
     const { onSuccess, onError } = callbacks;
     try {
-      const res: any = this.exampleRepository.delete(example);
+      const res: any = this._exampleRepository._delete(example);
       onSuccess(res);
     } catch (error: any) {
       onError(error);
