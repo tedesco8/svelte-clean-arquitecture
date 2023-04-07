@@ -1,21 +1,25 @@
-# svelte-clean-arquitecture
+# Svelte Clean Arquitecture
+<img src="https://res.cloudinary.com/ddzlqebet/image/upload/v1680828669/Captura_de_pantalla_de_2023-04-06_21-50-55_ud35tu.png">
+
+## Hexagonal Arquitecture
+
+<img src="https://res.cloudinary.com/ddzlqebet/image/upload/v1680826972/hexagonal_vma1tx.jpg">
 
 ## Get started
 
 Install the dependencies...
 
 ```bash
-cd svelte-app
 npm install
 ```
 
 ...then start webpack:
 
 ```bash
-npm run dev
+npm run start
 ```
 
-Navigate to [localhost:8080](http://localhost:8080). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
+Navigate to [localhost:3000](http://localhost:3000). You should see your app running. Edit a component file in `src`, save it, and the page should reload with your changes.
 
 
 ## Deploying to the web
